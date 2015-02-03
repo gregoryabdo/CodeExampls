@@ -14,7 +14,7 @@ public class JDBC {
 		try {
 			// Connect to database. 
 			 /*String url = "jdbc:postgresql://dev-box:5432/postgres?"
-					+ "ssl=true"
+					+ "ssl=true&"
 					+ "sslfactory=org.postgresql.ssl.NonValidatingFactory"; //*/
 			
 			String url = "jdbc:postgresql://dev-box:5432/postgres?ssl=true";

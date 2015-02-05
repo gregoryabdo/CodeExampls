@@ -29,12 +29,12 @@ public class threading implements Runnable {
     }
 
     public void run() {
-		String theString = new String();
+    	StringBuilder theString = new StringBuilder();
 		
 		for( int i = start; i < start + size; i++){
 			//System.out.println("Char " + i + " " + toAnalize.charAt(i));
 				if(hs.contains(toAnalize.charAt(i)))
-						theString += toAnalize.charAt(i);
+						theString.append(toAnalize.charAt(i));
 		}
 		
     }

@@ -7,30 +7,30 @@ public class helperFunctions {
 	
 	// Create the string for analysis.
 	static String generateString( int size ){
-		String theString = new String();
+		StringBuilder theString = new StringBuilder(); 
 		Random r = new Random();
 		String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		for( int i = 0; i < size; i++ ){
-			theString += alphabet.charAt(r.nextInt(alphabet.length()));
-		}
-		return theString;
+		for( int i = 0; i < size; i++ )
+			theString.append(alphabet.charAt(r.nextInt(alphabet.length())));
+
+		return theString.toString();
 	}
 	
 	// Remove vals using if statement.
 	static String runTestIf( String toAnalize ){
-		String theString = new String();
+		StringBuilder theString = new StringBuilder();
 		
 		for( int i =0; i < toAnalize.length(); i++)
 				if(isValIf(toAnalize.charAt(i)))
-					theString += toAnalize.charAt(i);
+					theString.append(toAnalize.charAt(i));
 		
-		return theString;
+		return theString.toString();
 	}
 
 	// Remove vals using HashMap.
 	static String runTestHash( String toAnalize ){
-		String theString = new String();
+		StringBuilder theString = new StringBuilder();
 		
 	    // create a hash set
 		hs = new HashSet();
@@ -49,9 +49,9 @@ public class helperFunctions {
 		
 		for( int i = 0; i < toAnalize.length(); i++)
 				if(isValHash(toAnalize.charAt(i)))
-						theString += toAnalize.charAt(i);
+						theString.append(toAnalize.charAt(i));
 		
-		return theString;
+		return theString.toString();
 	}
 	
 	// Analyze char using if statements.

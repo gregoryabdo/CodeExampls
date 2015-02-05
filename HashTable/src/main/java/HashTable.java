@@ -5,9 +5,9 @@ public class HashTable {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int stringSize = 400000;
+		int stringSize = 4000000;
 		String testString = helperFunctions.generateString(stringSize);
-		System.out.println("String Created");
+		System.out.println("String Created " + testString.length());
 
 			
 		

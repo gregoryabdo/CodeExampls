@@ -10,7 +10,6 @@ public class GPIO {
 		Path file = Paths.get("/sys/devices/virtual/misc/gpio/pin/gpio0");
 		try {
 			System.out.println(Files.readAllLines(file).get(0));
-			//System.out.println(Arrays.toString(Files.readAllBytes(file)));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

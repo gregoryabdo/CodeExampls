@@ -13,27 +13,28 @@ public class ValRemoveTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int stringSize = 400000000;
+		int stringSize = 40000000;
 		String testString = helperFunctions.generateString(stringSize);
-		System.out.println("String Created " + testString.length());
+		System.out.println("String Created. Length: " + testString.length());
 
+		String output;
 		
 		// Run the If test.
 		long startTime = System.nanoTime();
-		helperFunctions.runTestIf(testString);
+		output = helperFunctions.runTestIf(testString);
 		long endTime = System.nanoTime();
 		
 		System.out.print(endTime - startTime);
-		System.out.println("ns for if statement test");
+		System.out.println("ns for if statement test. Returned length is: " + output.length());
 
 		
 	    // Run the hash test.
 	    startTime = System.nanoTime();
-	    helperFunctions.runTestHash(testString);
+	    output = helperFunctions.runTestHash(testString);
 		endTime = System.nanoTime();
 		
 		System.out.print(endTime - startTime);
-		System.out.println("ns for hashset test");
+		System.out.println("ns for hashset test. Returned length is: " + output.length());
 		
 		
 		// Run the threading test.

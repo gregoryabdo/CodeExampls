@@ -33,7 +33,7 @@ public class helperFunctions {
 		StringBuilder theString = new StringBuilder();
 		
 		for( int i = 0; i < toAnalize.length(); i++)
-				if(isValIf(toAnalize.charAt(i)))
+				if(isCharIf(toAnalize.charAt(i)))
 					theString.append(toAnalize.charAt(i));
 		
 		return theString.toString();
@@ -51,6 +51,7 @@ public class helperFunctions {
 		hs = new HashSet<Character>();
 	    
 	    // add elements to the hash set
+	    /*
 	    hs.add('a');
 	    hs.add('A');
 	    hs.add('e');
@@ -61,6 +62,11 @@ public class helperFunctions {
 	    hs.add('O');
 	    hs.add('u');
 	    hs.add('U');
+	    */
+		
+		String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for( int i = 0; i < alphabet.length(); i++)
+			hs.add(alphabet.charAt(i));
 		
 		for( int i = 0; i < toAnalize.length(); i++)
 				if(isValHash(toAnalize.charAt(i)))
@@ -101,4 +107,20 @@ public class helperFunctions {
 	static boolean isValHash( char charactor ){
 		return hs.contains(charactor);
 	}
+	
+	/****************************************************************
+	 * 
+	 * @param charactor
+	 * @return
+	 ****************************************************************/
+	static boolean isCharIf(char charactor){
+	String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		
+		for( int i = 0; i < alphabet.length(); i++)
+			if( charactor == alphabet.charAt(i) )
+				return true;
+		
+		return false;
+	}
+	
 }

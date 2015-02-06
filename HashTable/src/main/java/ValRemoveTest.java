@@ -1,15 +1,22 @@
 
-public class HashTable {
+/****************************************************************
+ * 
+ * @author gregoryabdo
+ *
+ ****************************************************************/
+public class ValRemoveTest {
 	
-	// Class main.
+	/****************************************************************
+	 * 
+	 * @param args
+	 ****************************************************************/
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int stringSize = 4000000;
+		int stringSize = 400000000;
 		String testString = helperFunctions.generateString(stringSize);
 		System.out.println("String Created " + testString.length());
 
-			
 		
 		// Run the If test.
 		long startTime = System.nanoTime();

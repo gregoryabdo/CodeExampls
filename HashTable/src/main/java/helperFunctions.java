@@ -1,11 +1,18 @@
 import java.util.HashSet;
 import java.util.Random;
 
+/****************************************************************
+ * 
+ ****************************************************************/
 public class helperFunctions {
 	
-	static HashSet hs;
+	static HashSet<String> hs;
 	
-	// Create the string for analysis.
+	/****************************************************************
+	 * Create the string for analysis.
+	 * @param size
+	 * @return
+	 ****************************************************************/
 	static String generateString( int size ){
 		StringBuilder theString = new StringBuilder(); 
 		Random r = new Random();
@@ -17,7 +24,11 @@ public class helperFunctions {
 		return theString.toString();
 	}
 	
-	// Remove vals using if statement.
+	/****************************************************************
+	 * Remove vals using if statement.
+	 * @param toAnalize
+	 * @return
+	 ****************************************************************/
 	static String runTestIf( String toAnalize ){
 		StringBuilder theString = new StringBuilder();
 		
@@ -27,13 +38,17 @@ public class helperFunctions {
 		
 		return theString.toString();
 	}
-
-	// Remove vals using HashMap.
+	
+	/****************************************************************
+	 * Remove vals using HashMap.
+	 * @param toAnalize
+	 * @return
+	 ****************************************************************/
 	static String runTestHash( String toAnalize ){
 		StringBuilder theString = new StringBuilder();
 		
 	    // create a hash set
-		hs = new HashSet();
+		hs = new HashSet<String>();
 	    
 	    // add elements to the hash set
 	    hs.add("a");
@@ -54,7 +69,11 @@ public class helperFunctions {
 		return theString.toString();
 	}
 	
-	// Analyze char using if statements.
+	/****************************************************************
+	 * Analyze char using if statements.
+	 * @param charactor
+	 * @return
+	 ****************************************************************/
 	static boolean isValIf( char charactor ){
 		
 		if(charactor == 'a' || charactor == 'A')
@@ -74,7 +93,11 @@ public class helperFunctions {
 		return false;
 	}
 	
-	// Analyze char using hash map.
+	/****************************************************************
+	 * Analyze char using hash map.
+	 * @param charactor
+	 * @return
+	 ****************************************************************/
 	static boolean isValHash( char charactor ){
 		return hs.contains(charactor);
 	}

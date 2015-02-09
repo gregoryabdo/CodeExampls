@@ -3,10 +3,13 @@ import java.util.Random;
 
 /****************************************************************
  * 
+ * @author gregoryabdo
+ * 
  ****************************************************************/
 public class helperFunctions {
 	
 	static HashSet<Character> hs;
+	static String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	/****************************************************************
 	 * Create the string for analysis.
@@ -16,7 +19,6 @@ public class helperFunctions {
 	static String generateString( int size ){
 		StringBuilder theString = new StringBuilder(); 
 		Random r = new Random();
-		String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		for( int i = 0; i < size; i++ )
 			theString.append(alphabet.charAt(r.nextInt(alphabet.length())));
@@ -64,7 +66,6 @@ public class helperFunctions {
 	    hs.add('U');
 	    */
 		
-		String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		for( int i = 0; i < alphabet.length(); i++)
 			hs.add(alphabet.charAt(i));
 		
@@ -114,7 +115,6 @@ public class helperFunctions {
 	 * @return
 	 ****************************************************************/
 	static boolean isCharIf(char charactor){
-	String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		for( int i = 0; i < alphabet.length(); i++)
 			if( charactor == alphabet.charAt(i) )

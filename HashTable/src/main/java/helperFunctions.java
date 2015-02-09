@@ -9,8 +9,8 @@ import java.util.Random;
 public class helperFunctions {
 	
 	static HashSet<Character> hs;
-	//static String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	static String alphabet = "aeiouAEIOU";
+	static String FullAlphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	/****************************************************************
 	 * Create the string for analysis.
@@ -22,7 +22,7 @@ public class helperFunctions {
 		Random r = new Random();
 		
 		for( int i = 0; i < size; i++ )
-			theString.append(alphabet.charAt(r.nextInt(alphabet.length())));
+			theString.append(FullAlphabet.charAt(r.nextInt(FullAlphabet.length())));
 
 		return theString.toString();
 	}
@@ -38,7 +38,7 @@ public class helperFunctions {
 		for( int i = 0; i < toAnalize.length(); i++)
 				if(isValIf(toAnalize.charAt(i)))
 					theString.append(toAnalize.charAt(i));
-		
+
 		return theString.toString();
 	}
 	
@@ -52,7 +52,6 @@ public class helperFunctions {
 		
 	    // create a hash set
 		hs = new HashSet<Character>();
-
 		
 		for( int i = 0; i < alphabet.length(); i++)
 			hs.add(alphabet.charAt(i));
